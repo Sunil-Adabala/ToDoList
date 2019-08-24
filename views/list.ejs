@@ -1,0 +1,38 @@
+<%- include("header")-%>
+
+  <div class="box" id="heading">
+    <h1>
+      <%=listTitle%>
+    </h1>
+  </div>
+
+  <div class="box">
+    <ul>
+      <!-- <li>buy food</li>
+    <li>Cook food</li>
+    <li>Eat food</li> -->
+
+      <%for(let i=0;i<newListItems.length;i++){ %>
+      <div class="item">
+        <input type="checkbox">
+        <p>
+          <%=newListItems[i]%>
+        </p>
+      </div>
+
+
+      <%}%>
+    </ul>
+
+    <form class="item" action="/" method="post">
+    <input type="text" name="task" placeholder="New Item" required autofocus autocomplete="off">
+    <button class="btn" type="submit" name="list" value="<%=listTitle%>">+</button>
+
+    </form>
+  </div>
+
+<!-- <form  action="/" method="post">
+  <button  type="submit" ><a>about</a></button>
+</form> -->
+
+  <%- include("footer")-%>
